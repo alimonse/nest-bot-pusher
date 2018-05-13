@@ -5,8 +5,8 @@ new Vue({
     chats: [],
   },
   created() {
-    let pusher = new Pusher('YOUR_API_KEY', {
-      cluster: 'CLUSTER',
+    let pusher = new Pusher('4dc6e14ad6a0472b713d', {
+      cluster: 'eu',
       encrypted: true
     });
     
