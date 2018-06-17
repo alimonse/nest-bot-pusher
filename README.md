@@ -2,6 +2,8 @@
 
 A a chat bot application built with Nest.js, Dialogflow and Pusher.
 
+[View tutorial](https://pusher.com/tutorials/chat-bot-nestjs)
+
 Screenshot of the demo app
 
 ![final-bot-result](https://user-images.githubusercontent.com/19610753/39927451-2672f8f0-552a-11e8-86fa-8f57482b300b.gif)
