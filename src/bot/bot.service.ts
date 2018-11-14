@@ -5,13 +5,13 @@ import axios from 'axios';
 export class BotService {
     
     private baseURL: string = "https://api.dialogflow.com/v1/query?v=20150910";
-    private token: string = "YOUR_DEVELOPER_TOKEN";
+    private token: string = "c3e61a5723aba88edca4";
     
     sendDialogue(info) {
         
         let data = {
             query : info.message,
-            lang: 'en',
+            lang: 'es',
             sessionId: '123456789!@#$%'
         }
 
@@ -25,10 +25,10 @@ export class BotService {
         const Pusher = require('pusher');
     
         var pusher = new Pusher({
-            appId: 'YOUR_APP_ID',
-            key: 'YOUR_APP_KEY',
-            secret: 'YOUR_APP_SECRET',
-            cluster: 'CLUSTER',
+            appId: '648856',
+            key: 'c3e61a5723aba88edca4',
+            secret: 'de4acb6b6c7922b9b0dd',
+            cluster: 'us2',
             encrypted: true
         });
 
