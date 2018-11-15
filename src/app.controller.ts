@@ -13,6 +13,8 @@ export class AppController {
   @Post()
   startDialogue(@Res() res, @Body() data) {
       this.botService.sendDialogue(data);
-      res.status(HttpStatus.OK).send("Posted successfully AQUIIII ENTRAAA");
-  }
+      //console.log('res',res)
+      res.status(HttpStatus.OK).send("Buen Post");
+  } 
+
 }

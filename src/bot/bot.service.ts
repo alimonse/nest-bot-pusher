@@ -5,20 +5,24 @@ import axios from 'axios';
 export class BotService {
     
     private baseURL: string = "https://api.dialogflow.com/v1/query?v=20150910";
-    private token: string = "c3e61a5723aba88edca4";
+    private token: string = "15deac4e2293494a9333b91ee332ac18";
     
-    sendDialogue(info) {
+     sendDialogue(info) {
         
         let data = {
             query : info.message,
             lang: 'es',
-            sessionId: '123456789!@#$%'
+            sessionId: '123456789'
         }
 
-        axios.post(`${this.baseURL}`, data, {headers: { Authorization: `Bearer ${this.token}` }})
+     axios.post(`${this.baseURL}`, data, {headers: { Authorization: `Bearer ${this.token}` }})
         .then( response => {
-            this.postToPusher(response.data.result.fulfillment.speech, data.query);
-        })    
+    
+    this.postToPusher(response.data.result.fulfillment.speech, data.query);
+        })
+        .catch(error=>{
+            console.log(error )
+        })  
     }
 
     postToPusher(speech, query) {
@@ -29,7 +33,7 @@ export class BotService {
             key: 'c3e61a5723aba88edca4',
             secret: 'de4acb6b6c7922b9b0dd',
             cluster: 'us2',
-            encrypted: true
+            encrypted: false
         });
 
         const response = {
